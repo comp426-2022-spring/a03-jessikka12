@@ -106,3 +106,6 @@ function flipACoin(call) {
   }
   return {call: call, flip: coin, result: result};
 }
+
+// export stuff
+module.exports = {coinFlip, coinFlips, countFlips, flipACoin}

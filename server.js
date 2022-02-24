@@ -6,7 +6,7 @@ const args = require('minimist')(process.argv.slice(2))
 args["port"]
 const port = args.port || 5000
 
-const coin = require('./modules/coin.js')
+const coin = require('./modules/coin')
 
 // start app server
 const server = app.listen(port, () => {
@@ -22,8 +22,9 @@ app.get('/app/', (req, res) => {
 })
 
 app.get('/app/flip/', (req, res) => {
-    const flip = coin.flip()
-    res.writeHead(flip, {'Content-Type' : 'text/plain'})
+    res.statusCode = 200
+    var flip = coin.coinFlip()
+    res.writeHead(res.statusCode, {'Content-Type' : 'text/plain'})
     res.end(flip)
 })
 
