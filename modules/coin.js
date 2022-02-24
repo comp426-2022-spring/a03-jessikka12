@@ -106,9 +106,3 @@ function flipACoin(call) {
   }
   return {call: call, flip: coin, result: result};
 }
-
-/** Export 
- * 
- * Export all of your named functions
-*/
-export {coinFlip, coinFlips, countFlips, flipACoin};
