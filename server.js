@@ -12,12 +12,6 @@ const server = app.listen(port, () => {
     console.log('App listening on port %PORT%'.replace("%PORT%", port))
 })
 
-// default response for any other request
-app.use(function(req, res){
-    res.status(404).send('404 NOT FOUND')
-    res.type('text/plain')
-})
-
 // define check endpoint
 app.get('/app/', (req, res) => {
     res.statusCode = 200
@@ -26,3 +20,8 @@ app.get('/app/', (req, res) => {
     res.end(res.statusCode + ' ' + res.statusMessage)
 })
 
+// default response for any other request
+app.use(function(req, res){
+    res.status(404).send('404 NOT FOUND')
+    res.type('text/plain')
+})
