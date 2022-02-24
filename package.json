@@ -4,7 +4,7 @@
   "description": "learning how to make an API",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js"
+    "test": "node server.js --port=5555"
   },
   "repository": {
     "type": "git",
